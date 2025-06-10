@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "jaffle_shop"."main"."raw_payments";
+    -- dbt seed --
+    
+          COPY "jaffle_shop"."main"."raw_payments" FROM 'C:\Users\KBHATIA\jaffle_shop\seeds\raw_payments.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

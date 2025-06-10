@@ -1,0 +1,8 @@
+id,first_name,last_name,email,created_at,updated_at
+1,Michael,P,michael@jaffle_shop.com,2018-01-01 00:00:00,2018-01-01 00:00:00
+2,Shawn,M,shawn@jaffle_shop.com,2018-01-01 00:00:00,2018-01-01 00:00:00
+3,Kathleen,P,kathleen@jaffle_shop.com,2018-01-01 00:00:00,2018-01-01 00:00:00
+4,Jimmy,C,jimmy@jaffle_shop.com,2018-01-02 00:00:00,2018-01-02 00:00:00
+5,Katherine,R,katherine@jaffle_shop.com,2018-01-02 00:00:00,2018-01-02 00:00:00
+6,Sarah,R,sarah@jaffle_shop.com,2018-01-03 00:00:00,2018-01-03 00:00:00
+7,Martin,M,martin@jaffle_shop.com,2018-01-03 00:00:00,2018-01-03 00:00:00
