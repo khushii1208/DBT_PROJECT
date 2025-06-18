@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: "Raw data from the jaffle shop app"
+    database: DBT_TEST  # Your actual database
+    schema: dbt_kbhatia  # Your actual schema where seeds exist
+    tables:
+      - name: raw_customers
+        description: "Customer data"
+        
+      - name: raw_orders
+        description: "Order data"
+        
+      - name: raw_payments
+        description: "Payment data"

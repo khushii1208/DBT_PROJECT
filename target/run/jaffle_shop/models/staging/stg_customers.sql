@@ -1,18 +1,19 @@
 
+  create or replace   view DBT_TEST.dbt_kbhatia.stg_customers
   
-  create view "jaffle_shop"."main"."stg_customers__dbt_tmp" as (
+  
+  
+  
+  as (
     
 
-with customers as (
-    select
-        id as customer_id,
-        first_name,
-        last_name,
-        email,
-        created_at,
-        updated_at
-    from "jaffle_shop"."main"."raw_customers"
-)
-
-select * from customers
+select
+    id as customer_id,
+    first_name,
+    last_name,
+    email,
+    created_at,
+    updated_at
+from DBT_TEST.dbt_kbhatia.raw_customers
   );
+

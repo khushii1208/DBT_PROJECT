@@ -1,10 +1,11 @@
 
     
     
-    truncate table "jaffle_shop"."main"."raw_customers";
+    truncate table "DBT_TEST"."DBT_KBHATIA"."RAW_CUSTOMERS";
     -- dbt seed --
     
-          COPY "jaffle_shop"."main"."raw_customers" FROM 'C:\Users\KBHATIA\jaffle_shop\seeds\raw_customers.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+            insert into DBT_TEST.dbt_kbhatia.raw_customers (id, first_name, last_name, email, created_at, updated_at) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
         
 
 ;

@@ -7,7 +7,7 @@ with monthly_revenue as (
         count(distinct order_id) as monthly_orders,
         count(distinct customer_id) as monthly_customers,
         avg(amount) as avg_order_value
-    from "jaffle_shop"."main"."fct_orders"
+    from DBT_TEST.dbt_kbhatia.fct_orders
     where order_status not in ('returned', 'cancelled')
     group by date_trunc('month', order_date)
 )

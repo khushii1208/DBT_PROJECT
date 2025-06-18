@@ -1,7 +1,7 @@
 
 
 with customers as (
-    select * from "jaffle_shop"."main"."stg_customers"
+    select * from DBT_TEST.dbt_kbhatia.stg_customers
 ),
 
 customer_orders as (
@@ -10,7 +10,7 @@ customer_orders as (
         min(order_date) as first_order_date,
         max(order_date) as most_recent_order_date,
         count(order_id) as number_of_orders
-    from "jaffle_shop"."main"."stg_orders"
+    from DBT_TEST.dbt_kbhatia.stg_orders
     group by customer_id
 ),
 
@@ -18,8 +18,8 @@ customer_payments as (
     select
         orders.customer_id,
         sum(payments.amount_usd) as lifetime_value
-    from "jaffle_shop"."main"."stg_orders" orders
-    left join "jaffle_shop"."main"."stg_payments" payments
+    from DBT_TEST.dbt_kbhatia.stg_orders orders
+    left join DBT_TEST.dbt_kbhatia.stg_payments payments
         on orders.order_id = payments.order_id
     group by orders.customer_id
 ),

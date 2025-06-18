@@ -22,7 +22,7 @@ select
         else 'High Spender'
     end as spending_level
     
-from "jaffle_shop"."main"."dim_customers"
+from DBT_TEST.dbt_kbhatia.dim_customers
 where number_of_orders > 0
 order by lifetime_value desc
 limit 20

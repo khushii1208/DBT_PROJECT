@@ -1,10 +1,11 @@
 
     
     
-    truncate table "jaffle_shop"."main"."raw_payments";
+    truncate table "DBT_TEST"."DBT_KBHATIA"."RAW_PAYMENTS";
     -- dbt seed --
     
-          COPY "jaffle_shop"."main"."raw_payments" FROM 'C:\Users\KBHATIA\jaffle_shop\seeds\raw_payments.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+            insert into DBT_TEST.dbt_kbhatia.raw_payments (id, order_id, payment_method, status, amount, created_at, updated_at) values
+            (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s)
         
 
 ;
